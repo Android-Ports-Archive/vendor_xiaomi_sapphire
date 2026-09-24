@@ -10,6 +10,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sapphire/proprietary/odm/etc/audio_policy_engine_default_stream_volumes.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_policy_engine_default_stream_volumes.xml \
     vendor/xiaomi/sapphire/proprietary/odm/etc/audio_policy_engine_product_strategies.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_policy_engine_product_strategies.xml \
     vendor/xiaomi/sapphire/proprietary/odm/etc/audio_policy_engine_stream_volumes.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_policy_engine_stream_volumes.xml \
+    vendor/xiaomi/sapphire/proprietary/odm/etc/camera/camerabooster.json:$(TARGET_COPY_OUT_ODM)/etc/camera/camerabooster.json \
     vendor/xiaomi/sapphire/proprietary/odm/etc/permissions/sku_n7n/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_n7n/android.hardware.nfc.hce.xml \
     vendor/xiaomi/sapphire/proprietary/odm/etc/permissions/sku_n7n/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_n7n/android.hardware.nfc.hcef.xml \
     vendor/xiaomi/sapphire/proprietary/odm/etc/permissions/sku_n7n/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_n7n/android.hardware.nfc.uicc.xml \
@@ -295,8 +296,47 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Config/config_mode_all.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Config/config_mode_all.json \
     vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Config/config_mode_front.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Config/config_mode_front.json \
     vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Config/config_mode_rear.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Config/config_mode_rear.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/0_Spotless/FaceMask.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/0_Spotless/FaceMask.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/0_Spotless/effect.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/0_Spotless/effect.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothClassical/BeautyMap.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothClassical/BeautyMap.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothClassical/FaceMask.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothClassical/FaceMask.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothClassical/effect_capture.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothClassical/effect_capture.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothClassical/effect_preview.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothClassical/effect_preview.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/2_SkinSmoothRear/FaceMask.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/2_SkinSmoothRear/FaceMask.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/2_SkinSmoothRear/effect_capture.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/2_SkinSmoothRear/effect_capture.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/2_SkinSmoothRear/effect_preview.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/2_SkinSmoothRear/effect_preview.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/20_FaceRetouch/mode_front.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/20_FaceRetouch/mode_front.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/20_FaceRetouch/mode_rear.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/20_FaceRetouch/mode_rear.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEye/LeftEye.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEye/LeftEye.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEye/RightEye.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEye/RightEye.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEye/effect.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEye/effect.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEyeV3/effect.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEyeV3/effect.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEyeV3/eye_pupil.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEyeV3/eye_pupil.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEyeV3/left_eye.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEyeV3/left_eye.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEyeV3/right_eye.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEyeV3/right_eye.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/30_BasicRetouch/mode_base.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/30_BasicRetouch/mode_base.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/40_FaceStereo/Effects/0_ModeFront/effect_capture.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/40_FaceStereo/Effects/0_ModeFront/effect_capture.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/40_FaceStereo/Effects/0_ModeFront/effect_preview.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/40_FaceStereo/Effects/0_ModeFront/effect_preview.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/40_FaceStereo/Effects/0_ModeFront/xr.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/40_FaceStereo/Effects/0_ModeFront/xr.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/40_FaceStereo/mode_front.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/40_FaceStereo/mode_front.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/50_SkinTone/Effects/0_ModeFront/effect.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/50_SkinTone/Effects/0_ModeFront/effect.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/50_SkinTone/Effects/0_ModeFront/filter.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/50_SkinTone/Effects/0_ModeFront/filter.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/50_SkinTone/mode_front.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/50_SkinTone/mode_front.json \
     vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/5_DLRetouch/mode_front.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/5_DLRetouch/mode_front.json \
     vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/5_DLRetouch/mode_rear.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/5_DLRetouch/mode_rear.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/Eyebrow.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/Eyebrow.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/effect_capture.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/effect_capture.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/effect_preview.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/effect_preview.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/sh.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/sh.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/yyy.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/yyy.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/yyz.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/yyz.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/zc.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/zc.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/60_Makeup/mode_front.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/60_Makeup/mode_front.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/70_FacialRefine/Effects/0_ModeFront/effect_capture.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/70_FacialRefine/Effects/0_ModeFront/effect_capture.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/70_FacialRefine/Effects/0_ModeFront/effect_preview.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/70_FacialRefine/Effects/0_ModeFront/effect_preview.json \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/70_FacialRefine/Effects/0_ModeFront/eye_refine.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/70_FacialRefine/Effects/0_ModeFront/eye_refine.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/70_FacialRefine/Effects/0_ModeFront/facelift.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/70_FacialRefine/Effects/0_ModeFront/facelift.bin \
+    vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/70_FacialRefine/mode_front.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/70_FacialRefine/mode_front.json \
     vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/effect_list.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/effect_list.json \
     vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/effect_mode_clear.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/effect_mode_clear.json \
     vendor/xiaomi/sapphire/proprietary/vendor/etc/camera/resources/render/Effect/effect_mode_front.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/resources/render/Effect/effect_mode_front.json \
@@ -566,6 +606,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/camera/com.qti.tuned.n7_sunny_sc202pcs_macro_ii_global.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.n7_sunny_sc202pcs_macro_ii_global.bin \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/camera/components/com.jigan.node.rawsupernight.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.jigan.node.rawsupernight.so \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/camera/components/com.jigan.node.realtimebokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.jigan.node.realtimebokeh.so \
+    vendor/xiaomi/sapphire/proprietary/vendor/lib64/camera/components/com.mi.node.tsskinbeautifier.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.mi.node.tsskinbeautifier.so \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/camera/components/com.qti.camx.chiiqutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.camx.chiiqutils.so \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/camera/components/com.qti.eisv2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.eisv2.so \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/camera/components/com.qti.eisv3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.eisv3.so \
@@ -672,6 +713,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/libanc_single_rt_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libanc_single_rt_bokeh.so \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/libar-acdb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libar-acdb.so \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/libar-gpr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libar-gpr.so \
+    vendor/xiaomi/sapphire/proprietary/vendor/lib64/libarcsoft_beautyshot.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_beautyshot.so \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/libarcsoft_dualcam_refocus_image.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_dualcam_refocus_image.so \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/libarcsoft_dualcam_refocus_video.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_dualcam_refocus_video.so \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/libarcsoft_hdr_detection.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_hdr_detection.so \
@@ -720,6 +762,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/libmialgo_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmialgo_utils.so \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/libmialgoengine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmialgoengine.so \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/libmifpext.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmifpext.so \
+    vendor/xiaomi/sapphire/proprietary/vendor/lib64/libmiphone_capture_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmiphone_capture_bokeh.so \
+    vendor/xiaomi/sapphire/proprietary/vendor/lib64/libmiphone_preview_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmiphone_preview_bokeh.so \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/libmmcamera_cac3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_cac3.so \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/libmmcamera_lscv35.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_lscv35.so \
     vendor/xiaomi/sapphire/proprietary/vendor/lib64/libmmcamera_mfnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_mfnr.so \
